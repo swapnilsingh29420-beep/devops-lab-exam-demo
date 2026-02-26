@@ -1,4 +1,4 @@
-from facotrial import fact
+from factorial import fact
 
 def test_fact():
   assert fact(3) == 6
