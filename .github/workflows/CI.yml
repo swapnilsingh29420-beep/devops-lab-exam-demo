@@ -1,0 +1,22 @@
+name: CI pipeline
+
+on: [push]
+
+jobs:
+    runs on: ubuntu-latest
+    build-and-test:
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Setting python
+          uses: actions/setup-python@v5
+          with: 
+             'Python 3.10'
+
+        - name: Install dependencies
+          run:  pip install pytest
+
+        - name: Run tests
+          run: pytest
+          
