@@ -1,7 +1,7 @@
 def fact(a):
-  int f=0
+  f=1
   if a==0:
-    return 1
+    return f
   for i in range(1,a+1):
     f=f*i
   return f
