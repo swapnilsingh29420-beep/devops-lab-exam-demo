@@ -3,14 +3,14 @@ name: CI pipeline
 on: [push]
 
 jobs:
-    runs on: ubuntu-latest
-    build-and-test:
-        steps:
+   runs on: ubuntu-latest
+   build-and-test:
+      steps:
         - name: Checkout code
-          uses: actions/checkout@v4
-
+        uses: actions/checkout@v4
+        
         - name: Setting python
-          uses: actions/setup-python@v5
+        uses: actions/setup-python@v5
           with: 
              'Python 3.10'
 
@@ -19,4 +19,3 @@ jobs:
 
         - name: Run tests
           run: pytest
-          
